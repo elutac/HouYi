@@ -6,7 +6,7 @@ import openai
 
 from constant.chromosome import Chromosome
 from harness.base_harness import Harness
-from harness.demo_translator_harness import TranslatorHarness
+from harness.connector_harness import ConnectorHarness
 from intention.base_intention import Intention
 from intention.content_manipulation import ContentManipulation
 from iterative_prompt_optimization import IterativePromptOptimizer
@@ -45,7 +45,7 @@ def inject(intention: Intention, application_harness: Harness) -> Chromosome:
 def main():
     # Initialize prompt injection intention and harness
     content_manipulation = ContentManipulation()
-    application_harness = TranslatorHarness()
+    application_harness = ConnectorHarness()
 
     # Begin the prompt injection process
     chromosome = inject(content_manipulation, application_harness)
