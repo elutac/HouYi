@@ -5,3 +5,4 @@ requests~=2.30.0
 loguru~=0.5.3
 pandas~=2.0.2
 pyperclip~=1.8.2
+fpdf==1.7.2 
