@@ -23,7 +23,7 @@ def main():
     parser.add_argument("--site_url", required=True)
     parser.add_argument("--application_document", required=True)
     parser.add_argument("--name", default="target_app")
-    parser.add_argument("--input_type", default="text")
+    parser.add_argument("--content_type", default="text")
     args = parser.parse_args()
 
     openai.api_key = config["openai_key"]
@@ -33,7 +33,7 @@ def main():
         site_url=args.site_url,
         application_document=args.application_document,
         endpoint_url=args.endpoint_url,
-        input_type=args.input_type
+        content_type=args.content_type
     )
 
     intention = ContentManipulation()
